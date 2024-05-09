@@ -23,9 +23,19 @@ connectDb();
 // Initialize Express app
 const app = express();
 
+<<<<<<< HEAD
 // Middleware
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON requests
+=======
+app.use(cors({
+origin:[],
+    methods:[ "POST" , "GET"],
+    credentials:true
+
+    
+}))
+>>>>>>> 583fdd2c09de3660403a2a662d20f116bc46c411
 
 // Routes
 app.use("/api/contacts", require("./routes/contactRouters"));
@@ -46,5 +56,10 @@ app.use(errorHandler);
 // Start server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
+<<<<<<< HEAD
   console.log(`Server running on port ${port}`);
 });
+=======
+    console.log(`Server runiinrng port no ${port}`);
+})
+>>>>>>> 583fdd2c09de3660403a2a662d20f116bc46c411

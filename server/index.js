@@ -11,7 +11,13 @@ connectDb(); //calls from config/dbConnection file
 
 const app = express();
 
-app.use(cors())
+app.use(cors({
+origin:[],
+    methods:[ "POST" , "GET"],
+    credentials:true
+
+    
+}))
 
 const port = process.env.PORT || 5000;
 
